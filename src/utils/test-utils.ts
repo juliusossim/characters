@@ -10,7 +10,6 @@ export const waitForLoadingToFinish = () =>
     { timeout: 4000 }
   );
 
-
 // eslint-disable-next-line import/export
 export const render = async (
   ui: any,
@@ -23,9 +22,9 @@ export const render = async (
   const returnValue = {
     ...rtlRender(ui, {
       wrapper: AppProvider as FunctionComponent<unknown>,
-      ...renderOptions,
+      ...renderOptions
     }),
-    user,
+    user
   };
 
   await waitForLoadingToFinish();

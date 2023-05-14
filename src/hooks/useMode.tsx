@@ -1,31 +1,30 @@
-import { darkMode } from "@/utils/darkMode";
-import { useEffect, useState } from "react";
+import { darkMode } from '@/utils/darkMode';
+import { useEffect, useState } from 'react';
 
 export const useMode = (): string => {
-  const [isDark, setIsDark] = useState(false);
-  const milisecondsInHour =  60 * 60 * 1000; // 60 minutes * 60 seconds * 1000 milliseconds = 3.6*10^6 miliseconds
-const mode = isDark ? 'dark' : 'light';
+	const [isDark, setIsDark] = useState(false);
+	const milisecondsInHour = 60 * 60 * 1000; // 60 minutes * 60 seconds * 1000 milliseconds = 3.6*10^6 miliseconds
+	const mode = isDark ? 'dark' : 'light';
 
-  useEffect(() => {
-    const updateIsDark = () => {
-        setIsDark(darkMode());
-      };
-    
-    updateIsDark();
+	useEffect(() => {
+		const updateIsDark = () => {
+			setIsDark(darkMode());
+		};
 
-    // then, update hourly
-    const interval = setInterval(updateIsDark, milisecondsInHour);
+		updateIsDark();
 
-    return (): void => {
-      clearInterval(interval);
-    };
-  }, []);
+		// then, update hourly
+		const interval = setInterval(updateIsDark, milisecondsInHour);
 
-  //uncomment to see action.
-  // warning: awfull darkmode styles
+		return (): void => {
+			clearInterval(interval);
+		};
+	}, []);
 
-  // return isDark ? 'dark' : 'light';
+	//uncomment to see action.
+	// warning: awfull darkmode styles
 
-  return 'light'
+	// return isDark ? 'dark' : 'light';
+
+	return 'light';
 };
-

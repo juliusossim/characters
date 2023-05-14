@@ -1,10 +1,10 @@
-import { TwStyle } from 'twin.macro'
+import { TwStyle } from 'twin.macro';
 
 export type MainVariantProps = {
-    [key: string]: TwStyle;
-  }
+  [key: string]: TwStyle;
+};
 
-  export interface MainProps {
-    variant?: string;
-    isOpen?: boolean
-  }
+export interface MainProps {
+  variant?: string;
+  isOpen?: boolean;
+}

@@ -1,7 +1,7 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const BoxLayer = styled.div`
-  ${ tw`
+  ${tw`
   w-full
   rounded
   flex justify-center items-center m-auto
@@ -12,5 +12,4 @@ export const BoxLayer = styled.div`
   group-hover:font-semibold group-hover:font-serif group-hover:text-2xl
   lg:group-hover:visible lg:group-hover:backdrop-blur lg:group-hover:bg-purple-100
   `}
-`
-
+`;

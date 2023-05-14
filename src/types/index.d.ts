@@ -1,5 +1,4 @@
-export type   BaseInterface = {
-    id: string;
-    createdAt: number;
-  };
-  
+export type BaseInterface = {
+  id: string;
+  createdAt: number;
+};

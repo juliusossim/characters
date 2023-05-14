@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client'
+import { gql } from '@apollo/client';
 
 export const VIEW_CHARACTERS = gql`
   query ViewCharacters {
-    myQuery{
+    myQuery {
       id
       name
       img_url

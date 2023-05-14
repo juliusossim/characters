@@ -1,29 +1,23 @@
-
 const sizes = {
-  sm: 'h-4 w-4',
-  md: 'h-8 w-8',
-  lg: 'h-16 w-16',
-  xl: 'h-24 w-24',
+	sm: 'h-4 w-4',
+	md: 'h-8 w-8',
+	lg: 'h-16 w-16',
+	xl: 'h-24 w-24',
 };
 
 const variants = {
-  light: 'text-white',
-  primary: 'text-blue-600',
+	light: 'text-white',
+	primary: 'text-blue-600',
 };
 
 export type SpinnerProps = {
-  size?: keyof typeof sizes;
-  variant?: keyof typeof variants;
-  className?: string;
+	size?: keyof typeof sizes;
+	variant?: keyof typeof variants;
+	className?: string;
 };
 
 export const Spinner = ({ loading = false }) => {
-    const DONT_SPIN = false;
-    if(loading === DONT_SPIN)
-        return <span />
-  return (
-    <>
-    loading...
-      </>
-  );
+	const DONT_SPIN = false;
+	if (loading === DONT_SPIN) return <span />;
+	return <>loading...</>;
 };

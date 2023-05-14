@@ -10,37 +10,33 @@ import { Typography } from '@/components/Styles/Typography';
 import { StyledCharacterCard } from '@/components/Styles/CharacterPageStyles';
 
 const ErrorFallback = () => {
-  return (
-    <StyledCharacterCard>
+	return (
+		<StyledCharacterCard>
+			<Typography className="text-lg font-semibold">
+				Ooops, something went wrong :({' '}
+			</Typography>
 
-<Typography className="text-lg font-semibold">Ooops, something went wrong :( </Typography>
-
-<Button onClick={() => window.location.assign(window.location.origin)}>
-  Go Home
-</Button>
-
-    </StyledCharacterCard>
-  );
+			<Button onClick={() => window.location.assign(window.location.origin)}>
+				Go Home
+			</Button>
+		</StyledCharacterCard>
+	);
 };
 
 type AppProviderProps = {
-  children: ReactNode};
+	children: ReactNode;
+};
 
 export const AppProvider: FC<AppProviderProps> = ({ children }) => {
-
-  return (
-   <ProviderContextProvider>
-    <ApolloProvider client={client}>
-      <SuspenseLoader>
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <HelmetProvider>
-      
-              {children}
-      
-        </HelmetProvider>
-      </ErrorBoundary>
-   </SuspenseLoader>
-   </ApolloProvider>
-   </ProviderContextProvider>
-  );
+	return (
+		<ProviderContextProvider>
+			<ApolloProvider client={client}>
+				<SuspenseLoader>
+					<ErrorBoundary FallbackComponent={ErrorFallback}>
+						<HelmetProvider>{children}</HelmetProvider>
+					</ErrorBoundary>
+				</SuspenseLoader>
+			</ApolloProvider>
+		</ProviderContextProvider>
+	);
 };
