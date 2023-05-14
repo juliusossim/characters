@@ -1,7 +1,7 @@
-import { StrictMode } from "react";
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { GlobalStyles } from "twin.macro";
-import App from "./app";
+import App from '@/App'
+import { GlobalStyles } from '@/components/Styles/GlobalStyles'
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
 

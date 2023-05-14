@@ -20,6 +20,12 @@ const mode = isDark ? 'dark' : 'light';
       clearInterval(interval);
     };
   }, []);
-  return isDark ? 'dark' : 'light';
+
+  //uncomment to see action.
+  // warning: awfull darkmode styles
+
+  // return isDark ? 'dark' : 'light';
+
+  return 'light'
 };
 

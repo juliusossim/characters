@@ -1,9 +1,6 @@
 import { configName } from './utils/camelCase'
-type EnvVarsType = {
-    [key: string]: string | any;
-}
 const computeEnv = () => {
-    const envVars: EnvVarsType = {};
+    const envVars = {};
 for(const key in import.meta.env){
     envVars[configName(key)] = import.meta.env[key]
 }

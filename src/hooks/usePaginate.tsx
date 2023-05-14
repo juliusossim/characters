@@ -1,11 +1,6 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
-type UsePaginateProps = {
-  data: string[];
-  itemsPerPage: number;
-}
-
-export const usePaginate = ({ data, itemsPerPage = 10 }: UsePaginateProps) => {
+export const usePaginate = ({ data, itemsPerPage = 10 }) => {
     if(!data) return;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,21 +13,22 @@ export const usePaginate = ({ data, itemsPerPage = 10 }: UsePaginateProps) => {
     currentPage * itemsPerPage
   );
 
-  const nextPage = () => {
+  const nextPage = useCallback(() => {
     if(currentPage >= totalPages) return
      setCurrentPage((prevPage) => prevPage + 1);
-  };
+  }, [])
 
-  const gotoPage = (pageNo = 1) => {
+  const gotoPage = useCallback((pageNo = 1) => {
     if(pageNo === currentPage || pageNo >= totalPages || pageNo < 1 ) return
      setCurrentPage(pageNo);
-  };
+  }, []);
 
-  const previousPage = () => {
+  const previousPage = useCallback(() => {
     if(currentPage <= 1) return
 
     setCurrentPage((prevPage) => prevPage - 1);
-  };
+  }, []);
+
   return {
     currentItems,
     currentPage,
