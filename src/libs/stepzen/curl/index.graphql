@@ -1,0 +1,17 @@
+type RootEntry {
+  abilities: [String]
+  alias: [String]
+  gender: String
+  hair: String
+  id: Int
+  img_url: String
+  name: String
+  origin: String
+  species: String
+  status: String
+}
+
+type Query {
+  myQuery: [RootEntry]
+    @rest(endpoint: "https://finalspaceapi.com/api/v0/character/")
+}
