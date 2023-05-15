@@ -1,5 +1,6 @@
 import { PageLayout } from '@/layout/PageLayout';
 import { FC, useContext } from 'react';
+import { ScrollRestoration } from 'react-router-dom';
 import { VIEW_CHARACTERS } from '../api/charactersList';
 import { CharactersList } from '../components/CharacterList';
 import { GqlDataContextProvider } from '../contexts/GqlDataContextProvider';
@@ -10,6 +11,8 @@ export const Characters: FC = () => {
 			<GqlDataContextProvider query={VIEW_CHARACTERS}>
 				<CharactersList />
 			</GqlDataContextProvider>
+			<ScrollRestoration />
+
 		</PageLayout>
 	);
 };

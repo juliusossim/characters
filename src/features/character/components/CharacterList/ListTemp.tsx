@@ -8,7 +8,7 @@ import { FigureBox } from '@/components/UI/FigureBox';
 import { AppProviderContext } from '@/providers/providerContex';
 import { Typography } from '@/components/Styles/Typography';
 import { usePaginate } from '@/hooks/usePaginate';
-import { FlexCol, FlexRow } from '@/components/Styles/FlexBox';
+import { FlexRow } from '@/components/Styles/FlexBox';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
 import { Button } from '@/components/Button';
 import {
@@ -72,20 +72,17 @@ export const ListTemp: FC = () => {
 		scrollToView();
 		setCurrentPage(currentCharacterPage);
 
-		console.log({ currentCharacterKeys, ref: characterRef.current });
-
 		return () => {
 			currentCharacterKeys;
 		};
 	}, []);
 
-	const characters = currentItems;
 
 	return (
 		<FlexRow ref={characterRef}>
 			<FooterPageWrapper>
 				<FlexRow>
-					{characters?.map((character, index) => (
+					{currentItems?.map((character, index) => (
 						<Link
 							key={character.id}
 							to={`${character.id}`}

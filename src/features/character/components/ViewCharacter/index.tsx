@@ -14,7 +14,7 @@ import { Typography } from '@/components/Styles/Typography';
 import { AppProviderContext } from '@/providers/providerContex';
 import { useContext, FC } from 'react';
 import { HiArrowLeft } from 'react-icons/hi';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CharacterDataType } from '../../types';
 import { AbilitiesBox } from './AbilitiesBox';
 import { AkaBox } from './AkaBox';
@@ -41,9 +41,11 @@ export const ViewCharacter: FC<ViewCharacterProps> = ({
 				{name?.toUpperCase()}
 			</Typography>
 			<RightBox>
-				<Button size="lg" onClick={goBack}>
-					<HiArrowLeft />
-				</Button>
+				<Link to="/" preventScrollReset={true}>
+					<Button size="lg">
+						<HiArrowLeft />
+					</Button>
+				</Link>
 			</RightBox>
 
 			<StyledCharacterImage srcSet={img_url} alt={name} />
