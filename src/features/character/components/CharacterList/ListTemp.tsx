@@ -1,5 +1,5 @@
 import { FC, useCallback, useContext, useEffect } from 'react';
-import { GqlDataContext } from '../../contexts/GqlDataContextProvider';
+// import { GqlDataContext } from '../../contexts/GqlDataContextProvider';
 import { Link } from 'react-router-dom';
 import { BoxLayer } from '@/components/Styles/BoxLayer';
 import { Card } from '@/components/UI/Card';
@@ -15,6 +15,7 @@ import {
 	FooterPageWrapper,
 	StyledFooter,
 } from '@/components/Styles/StyledFooter';
+import { GqlDataContext } from '../../routes/Characters';
 
 export const ListTemp: FC = () => {
 	const { data } = useContext(GqlDataContext);
@@ -26,7 +27,9 @@ export const ListTemp: FC = () => {
 		nextPage,
 		previousPage,
 		totalPages,
-	} = usePaginate({ data: data?.myQuery });
+	} = usePaginate({ data });
+// } = usePaginate({ data: data?.myQuery });
+
 	const {
 		mode,
 		currentCharacterKeys,

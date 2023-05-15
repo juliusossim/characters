@@ -6,6 +6,7 @@ import { SuspenseLoader } from '@/utils/suspenseLoader';
 import { AnimatePresence } from 'framer-motion';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { viewCharacter as characterLoader } from '@/features/character/api/viewCharacter';
+import { viewCharacters as charactersLoader } from '@/features/character/api/charactersList';
 
 export const AppRoutes = () => {
 	const { Character } = lazyImport(
@@ -29,6 +30,7 @@ export const AppRoutes = () => {
 			children: [
 				{
 					path: '',
+					loader: charactersLoader,
 					element: (
 						<SuspenseLoader>
 							<Characters />
