@@ -1,4 +1,4 @@
 export type BaseInterface = {
-  id: string;
-  createdAt: number;
+	id: string;
+	createdAt: number;
 };

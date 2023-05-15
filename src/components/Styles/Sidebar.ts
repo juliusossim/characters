@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const StyledIconContainer = styled.img`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  flex: 40px 0;
-  margin-right: 20px;
-  margin-top: 10px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	flex: 40px 0;
+	margin-right: 20px;
+	margin-top: 10px;
 `;
 
 export const StyledTextContainer = tw.div`
@@ -17,29 +17,29 @@ export const StyledTextContainer = tw.div`
   `;
 
 export const StyledList = styled(motion.ul)`
-  padding: 25px;
-  position: absolute;
-  top: 40px;
-  width: 230px;
+	padding: 25px;
+	position: absolute;
+	top: 40px;
+	width: 230px;
 
-  ${tw`m-0  h-full `}
+	${tw`m-0  h-full `}
 `;
 export const StyledListItem = styled(motion.li)`
-  list-style: none;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  ${tw`m-0 invisible lg:visible`}
+	list-style: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	${tw`m-0 invisible lg:visible`}
 `;
 
 export const StyledCanvass = styled(motion.div)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  background: #fff;
-  ${tw`invisible lg:visible`}
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	background: #fff;
+	${tw`invisible lg:visible`}
 `;
 
 export const StyledNav = tw(motion.nav)`
@@ -47,23 +47,23 @@ export const StyledNav = tw(motion.nav)`
 `;
 
 export const StyledIconButton = styled.button`
-  outline: none;
-  border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  position: absolute;
-  border-radius: 50%;
-  background: transparent;
-  width: 50px;
-  height: 50px;
+	outline: none;
+	border: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	position: absolute;
+	border-radius: 50%;
+	background: transparent;
+	width: 50px;
+	height: 50px;
 `;
 
 export const SidebarIconButton = styled(StyledIconButton)`
-  top: 18px;
-  left: 25px;
-  ${tw`disabled:cursor-not-allowed`}
+	top: 18px;
+	left: 25px;
+	${tw`disabled:cursor-not-allowed`}
 `;
 export const HomeIcon = tw(StyledIconButton)`
   rounded-full bg-black text-white z-50

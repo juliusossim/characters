@@ -5,12 +5,18 @@ import { CharacterDataType } from '../types';
 
 type viewCharacterResponseProps = CharacterDataType;
 
-export const viewCharacterConfig = (id: string | undefined): AxiosRequestConfig => ({
-  method: 'GET',
-  url: `${id}`
+export const viewCharacterConfig = (
+	id: string | undefined
+): AxiosRequestConfig => ({
+	method: 'GET',
+	url: `${id}`,
 });
 
-export const viewCharacter = async ({ params }: Params): Promise<viewCharacterResponseProps> => {
-  const response = await apiRequest<viewCharacterResponseProps>(viewCharacterConfig(params?.id));
-  return response;
+export const viewCharacter = async ({
+	params,
+}: Params): Promise<viewCharacterResponseProps> => {
+	const response = await apiRequest<viewCharacterResponseProps>(
+		viewCharacterConfig(params?.id)
+	);
+	return response;
 };

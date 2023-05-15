@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 
 export const BoxLayer = styled.div`
-  ${tw`
+	${tw`
   w-full
   rounded
   flex justify-center items-center m-auto
