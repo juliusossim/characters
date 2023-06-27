@@ -2,9 +2,28 @@
   "name": "space-characters",
   "private": true,
   "version": "0.0.0",
+  "author": "Atunwa Digital",
+ "bugs": {
+   "url": "https://github.com/juliusossim/characters/issues"
+ },
+ "homepage": "https://github.com/juliusossim/characters#readme",
+ "license": "MIT",
+ "exports": {
+   ".": {
+     "import": "./dist/main.es.js",
+     "require": "./dist/main.cjs.js"
+   }
+ },
+ "main": "./dist/main.cjs.js",
+ "module": "./dist/main.es.js",
+ "typings": "./dist/main.d.ts",
+ "files": [
+   "dist"
+ ],
+
   "scripts": {
     "dev": "vite",
-    "build": "  vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
 "lint:fix": "eslint src/**/*.ts{,x} --fix",
@@ -15,7 +34,6 @@
     "@emotion/css": "^11.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "eslint-config-prettier": "^8.8.0",
     "framer-motion": "^10.12.10",

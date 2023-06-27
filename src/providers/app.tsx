@@ -13,7 +13,7 @@ const ErrorFallback = () => {
 	return (
 		<StyledCharacterCard>
 			<Typography className="text-lg font-semibold">
-				Ooops, something went wrong :({' '}
+				Ooops, something went wrong :{' '}
 			</Typography>
 
 			<Button onClick={() => window.location.assign(window.location.origin)}>

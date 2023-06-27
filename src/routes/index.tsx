@@ -1,5 +1,4 @@
 import { ErrorElement } from '@/components/UI/ErrorElement';
-import { characterRoutes } from '@/features/character/routes';
 import { Layout } from '@/layout';
 import { lazyImport } from '@/utils/lazyImports';
 import { SuspenseLoader } from '@/utils/suspenseLoader';
